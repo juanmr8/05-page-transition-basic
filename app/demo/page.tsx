@@ -91,7 +91,7 @@ function Page() {
   return (
     <LenisProvider>
       <Revealer />
-      <motion.div style={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }} className='home '>
+      <motion.div className='home '>
         <div className='header flex w-full flex-col items-center justify-center gap-[32px] pt-[100px]'>
           {images.map(image => (
             <img

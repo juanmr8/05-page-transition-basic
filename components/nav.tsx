@@ -18,7 +18,7 @@ function Nav() {
         },
       ],
       {
-        duration: 4000,
+        duration: 2000,
         easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
         pseudoElement: '::view-transition-new(root)',
       }
@@ -38,7 +38,7 @@ function Nav() {
     };
 
   return (
-    <div className='bg-background z-10 h-16 w-full relative'>
+    <div className='bg-background relative z-10 h-16 w-full'>
       <div className='container mx-auto flex h-full items-center gap-[16px] px-4'>
         <Link href='/' onClick={handleNavigation('/')}>
           Home

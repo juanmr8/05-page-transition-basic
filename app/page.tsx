@@ -10,9 +10,6 @@ export default function Page() {
     <LenisProvider>
       <Revealer />
       <motion.div
-        style={{ opacity: 0 }}
-        animate={{ opacity: 1, "--background": "red" }}
-        transition={{ duration: 1, delay: 1.5 }}
         className='home max-h-screen overflow-hidden bg-white'
       >
         <img
