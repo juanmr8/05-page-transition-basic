@@ -92,7 +92,7 @@ function Page() {
     <LenisProvider>
       <Revealer />
       <motion.div className='home '>
-        <div className='header flex w-full flex-col items-center justify-center gap-[32px] pt-[100px]'>
+        <div className='header content flex w-full flex-col items-center justify-center gap-[32px] pt-[100px]'>
           {images.map(image => (
             <img
               key={image.src}

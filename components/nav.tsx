@@ -8,6 +8,12 @@ function Nav() {
   const pathname = usePathname();
 
   const triggerPageTransition = () => {
+	document.documentElement.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 2000,
+        easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
+        pseudoElement: '::view-transition-new(.content)',
+      });
+
     document.documentElement.animate(
       [
         {
