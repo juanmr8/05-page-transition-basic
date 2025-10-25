@@ -1,46 +1,56 @@
+@import url('https://use.typekit.net/uzy1ibg.css');
 @import 'tailwindcss';
 
+@theme inline {
+  --font-warbler-display: var(--font-warbler-display);
+  --font-helvetica-neue-lt-pro: var(--font-helvetica-neue-lt-pro);
+}
+
 :root {
-	--background: black;
-	--foreground: #ffffff;
+  --background: #252525;
+  --foreground: #252525;
+  /* Define Adobe Typekit fonts */
+  --font-warbler-display: 'warbler-display', serif;
+  --font-helvetica-neue-lt-pro: 'helvetica-neue-lt-pro';
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-helvetica-neue-lt-pro);
+  --font-serif: var(--font-warbler-display);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ::view-transition-group(root) {
-	z-index: auto !important;
+  z-index: auto !important;
 }
 
 ::view-transition-image-pair(root) {
-	isolation: isolate;
-	will-change: transform, opacity, scale;
-	z-index: 1;
+  isolation: isolate;
+  will-change: transform, opacity, scale;
+  z-index: 1;
 }
 
 ::view-transition-new(root) {
-	z-index: 2;
-	animation: none !important;
+  z-index: 2;
+  animation: none !important;
 }
 
 ::view-transition-old(root) {
-	z-index: 1;
-	animation: none !important;
+  z-index: 1;
+  animation: none !important;
 }

@@ -1,5 +1,6 @@
 'use client';
 import { LenisProvider } from '../lenis-provider';
+import Title from '@/components/title';
 
 const images = [
 	{
@@ -85,8 +86,33 @@ const images = [
 function Page() {
 	return (
 		<LenisProvider>
-			<div className='home bg-black' id='content'>
-				<div className='header content flex w-full flex-col items-center justify-center gap-[32px] pt-[100px]'>
+			<div
+				className='grid w-full grid-cols-12 flex-col gap-4 bg-[#F5F5F5] py-[40px] pl-[82px] '
+				id='content'
+			>
+				<div className='col-span-2'>
+					<div className=' flex items-center gap-2'>
+						<div className='size-[32px] rounded-full bg-[#F61E1E]' />
+						<p>COURSE I</p>
+					</div>
+				</div>
+
+				<div className='col-span-8 col-start-4 flex flex-col gap-4 pb-8'>
+					<div className='flex'>
+						<p>$120</p>
+						<div className='my-[4px] ml-[6px] border-l border-gray-500' />
+						<p className='ml-[6px]'>6 MONTHS</p>
+					</div>
+					<Title className='text-[48px] leading-[0.85] lg:text-[9.5vw]'>
+						Principles of Nature and Art{' '}
+					</Title>
+					<p className='text-[#666565]'>The relationship between nature and art has captivated human imagination since our earliest ancestors first traced the outline of their hands on cave walls or carved figures from bone and stone. This enduring dialogue between the natural world and human creative expression reveals fundamental principles that govern both realms—patterns of growth and decay, harmony and tension, simplicity and complexity that manifest whether we observe the spiral of a nautilus shell or the composition of a Renaissance painting.</p>
+				</div>
+				<img
+					src='/img-course.jpg'
+					className='col-span-12 aspect-1361/764 object-cover pr-[32px]'
+				/>
+				{/* <div className='header content flex w-full flex-col items-center justify-center gap-[32px] pt-[100px] bg-[#F5F5F5]'>
 					{images.map(image => (
 						<img
 							key={image.src}
@@ -95,7 +121,7 @@ function Page() {
 							className={'size-[500px]'}
 						/>
 					))}
-				</div>
+				</div> */}
 			</div>
 		</LenisProvider>
 	);
