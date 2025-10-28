@@ -3,14 +3,17 @@ import Link from 'next/link';
 import { useTransitionRouter } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
+import { handler } from 'next/dist/build/templates/app-page';
+import { useEffect } from 'react';
 
 function Nav() {
 	const router = useTransitionRouter();
 	const pathname = usePathname();
 
 	const handleNavigation =
-		(path: string) =>
+		(path: string) => 
 		(e: React.MouseEvent<HTMLAnchorElement>): void => {
+			console.log("handleNavigation", pathname, path, handleNavigation);
 			if (pathname === path) {
 				e.preventDefault();
 				return;
@@ -19,6 +22,7 @@ function Nav() {
 				onTransitionReady: pageAnimation,
 			});
 		};
+
 
 	return (
 		<div className='menu text-foreground border-foreground fixed top-0 left-0 z-1000 flex h-screen w-[50px] flex-col border-r bg-[#F5F5F5]'>

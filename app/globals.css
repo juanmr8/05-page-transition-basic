@@ -55,23 +55,6 @@ body {
 	animation: none !important;
 }
 
-::view-transition-new(revealer) {
-	z-index: 2;
-	animation: none !important;
-}
-
-::view-transition-image-pair(revealer) {
-	isolation: isolate;
-	will-change: transform, opacity, scale;
-	z-index: 1;
-	animation: none !important;
-}
-
-::view-transition-old(revealer) {
-	z-index: 1;
-	animation: none !important;
-}
-
 ::view-transition-new(root) {
 	z-index: 2;
 	animation: none !important;
