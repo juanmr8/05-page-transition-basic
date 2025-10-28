@@ -15,27 +15,28 @@ function Title({
 }) {
 	const ref = useRef<HTMLHeadingElement>(null);
 	useGSAP(() => {
-		let split = SplitText.create(ref.current, {
-			type: 'chars',
-			lines: true,
-			words: true,
-			mask: 'chars',
-			smartWrap: true,
-		});
-
-		gsap.from(split.chars, {
-			opacity: 0,
-			y: '100%',
-			ease: 'power2.out',
-			duration: 0.8,
-			stagger: 0.03,
-			delay: 0.5,
+		document.fonts.ready.then(() => {
+			let split = SplitText.create(ref.current, {
+				type: 'chars',
+				lines: true,
+				words: true,
+				mask: 'chars',
+				smartWrap: true,
+			});
+			gsap.from(split.chars, {
+				opacity: 0,
+				y: '100%',
+				ease: 'power2.out',
+				duration: 0.8,
+				stagger: 0.03,
+				delay: 0.5,
+			});
 		});
 	}, {});
 
 	return (
-		<h1 className={cn('overflow-hidden', className)}>
-			<span className='block overflow-hidden py-[5px]' ref={ref}>
+		<h1 className={cn('', className)}>
+			<span className='block py-[5px]' ref={ref}>
 				{children}
 			</span>
 		</h1>

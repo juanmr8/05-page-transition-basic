@@ -48,7 +48,7 @@ const BottomPart = () => {
 					className='aspect-1383/646 size-full object-cover'
 				/>
 			</div>
-			<Title className='text-[] col-span-5 col-start-7 font-serif text-[108px] leading-[0.85] uppercase'>
+			<Title className='text-[] col-span-5 col-start-7 font-serif text-[108px] leading-[1] uppercase'>
 				Artists
 			</Title>
 			{/** Row 2 */}
